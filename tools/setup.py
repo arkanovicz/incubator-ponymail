@@ -227,15 +227,15 @@ def createIndex():
               "properties" : {
                 "content_type" : {
                   "type" : "keyword",
-                  "index" : "not_analyzed"
+                  "index" : "false"
                 },
                 "filename" : {
                   "type" : "keyword",
-                  "index" : "not_analyzed"
+                  "index" : "false"
                 },
                 "hash" : {
                   "type" : "keyword",
-                  "index" : "not_analyzed"
+                  "index" : "false"
                 },
                 "size" : {
                   "type" : "long"
@@ -252,33 +252,33 @@ def createIndex():
               "type" : "date",
               "store" : True,
               "format" : "yyyy/MM/dd HH:mm:ss",
-              "index" : "not_analyzed"
+              "index" : "false"
             },
             "epoch" : { # number of seconds since the epoch
               "type" : "long",
-              "index" : "not_analyzed"
+              "index" : "false"
             },
             "from" : {
               "type" : "text"
             },
             "from_raw" : {
               "type" : "keyword",
-              "index" : "not_analyzed"
+              "index" : "false"
             },
             "in-reply-to" : {
               "type" : "keyword",
-              "index" : "not_analyzed"
+              "index" : "false"
             },
             "list" : {
               "type" : "text"
             },
             "list_raw" : {
               "type" : "keyword",
-              "index" : "not_analyzed"
+              "index" : "false"
             },
             "message-id" : {
               "type" : "keyword",
-              "index" : "not_analyzed"
+              "index" : "false"
             },
             "mid" : {
               "type" : "keyword"
@@ -315,7 +315,7 @@ def createIndex():
             },
             "message-id" : {
               "type" : "keyword",
-              "index" : "not_analyzed"
+              "index" : "false"
             },
             "mid" : {
               "type" : "keyword"
@@ -329,15 +329,15 @@ def createIndex():
           "properties" : {
             "description" : {
               "type" : "keyword",
-              "index" : "not_analyzed"
+              "index" : "false"
             },
             "list" : {
               "type" : "keyword",
-#               "index" : "not_analyzed"
+#               "index" : "false"
             },
             "name" : {
               "type" : "keyword",
-              "index" : "not_analyzed"
+              "index" : "false"
             }
           }
         },
@@ -348,7 +348,7 @@ def createIndex():
           "properties" : {
             "cid" : {
               "type" : "keyword",
-              "index" : "not_analyzed"
+              "index" : "false"
             },
             "credentials" : {
               "properties" : {
@@ -357,15 +357,15 @@ def createIndex():
                 },
                 "email" : {
                   "type" : "keyword",
-                  "index" : "not_analyzed"
+                  "index" : "false"
                 },
                 "fullname" : {
                   "type" : "keyword",
-                  "index" : "not_analyzed"
+                  "index" : "false"
                 },
                 "uid" : {
                   "type" : "keyword",
-                  "index" : "not_analyzed"
+                  "index" : "false"
                 }
               }
             },
@@ -373,21 +373,21 @@ def createIndex():
               "properties" : {
                 "cookie" : {
                   "type" : "keyword",
-                  "index" : "not_analyzed"
+                  "index" : "false"
                 },
                 "ip" : {
                   "type" : "keyword",
-                  "index" : "not_analyzed"
+                  "index" : "false"
                 },
                 "oauth_used" : {
                   "type" : "keyword",
-                  "index" : "not_analyzed"
+                  "index" : "false"
                 }
               }
             },
             "request_id" : {
               "type" : "keyword",
-              "index" : "not_analyzed"
+              "index" : "false"
             }
           }
         },
@@ -406,30 +406,30 @@ def createIndex():
             },
             "from" : {
               "type" : "text",
-#               "index" : "not_analyzed"
+#               "index" : "false"
             },
             "in-reply-to" : {
               "type" : "keyword",
-               "index" : "not_analyzed"
+               "index" : "false"
             },
             "list" : {
               "type" : "text",
-#               "index" : "not_analyzed"
+#               "index" : "false"
             },
             "message-id" : {
               "type" : "keyword",
-              "index" : "not_analyzed"
+              "index" : "false"
             },
             "mid" : {
               "type" : "text",
-#               "index" : "not_analyzed"
+#               "index" : "false"
             },
             "private" : {
               "type" : "boolean"
             },
             "recipient" : {
               "type" : "keyword",
-              "index" : "not_analyzed"
+              "index" : "false"
             },
             "seen" : {
               "type" : "long"
@@ -437,15 +437,15 @@ def createIndex():
             "subject" : {
               "type" : "keyword",
               "fielddata": True # dropped later if DB_MAJOR==2
-#               "index" : "not_analyzed"
+#               "index" : "false"
             },
             "to" : {
               "type" : "text",
-#               "index" : "not_analyzed"
+#               "index" : "false"
             },
             "type" : {
               "type" : "keyword",
-              "index" : "not_analyzed"
+              "index" : "false"
             }
           }
         }
