@@ -251,12 +251,10 @@ def createIndex():
             "date" : {
               "type" : "date",
               "store" : True,
-              "format" : "yyyy/MM/dd HH:mm:ss",
-              "index" : "false"
+              "format" : "yyyy/MM/dd HH:mm:ss"
             },
             "epoch" : { # number of seconds since the epoch
-              "type" : "long",
-              "index" : "false"
+              "type" : "long"
             },
             "from" : {
               "type" : "text"
@@ -281,7 +279,7 @@ def createIndex():
               "index" : "false"
             },
             "mid" : {
-              "type" : "keyword"
+              "type" : "text"
             },
             "private" : {
               "type" : "boolean"
@@ -290,8 +288,7 @@ def createIndex():
               "type" : "text"
             },
             "subject" : {
-              "type" : "text",
-              "fielddata": True # dropped later if DB_MAJOR==2
+              "type" : "text"
             },
             "to" : {
               "type" : "text"
@@ -318,7 +315,7 @@ def createIndex():
               "index" : "false"
             },
             "mid" : {
-              "type" : "keyword"
+              "type" : "text"
             }
           }
         },
@@ -332,7 +329,7 @@ def createIndex():
               "index" : "false"
             },
             "list" : {
-              "type" : "keyword",
+              "type" : "text",
 #               "index" : "false"
             },
             "name" : {
@@ -435,8 +432,7 @@ def createIndex():
               "type" : "long"
             },
             "subject" : {
-              "type" : "keyword",
-              "fielddata": True # dropped later if DB_MAJOR==2
+              "type" : "text"
 #               "index" : "false"
             },
             "to" : {
