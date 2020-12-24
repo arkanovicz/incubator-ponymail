@@ -56,8 +56,10 @@ end
 -- json, status code (i.e. 200,201 or 404)
 local function performRequest(url, query, ok404) 
     local js = query
+    local len = 0
     if type(query) == "table" then
         js = JSON.encode(query)
+        len = string.len(js)
     end
     local result = {}
     local r, hc = http.request{
@@ -66,7 +68,7 @@ local function performRequest(url, query, ok404)
         source = ltn12.source.string(js),
         headers = {
             ["Content-Type"] = "application/json",
-            ["Content-Length"] = string.len(js)
+            ["Content-Length"] = len
         },
         sink = ltn12.sink.table(result)
     }
